@@ -1,0 +1,30 @@
+{
+  "name": "tchelinux2016",
+  "version": "1.0.0",
+  "description": "app de exemplo para demostrar a utilização do buddy.works",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index",
+    "test": "./node_modules/mocha/bin/mocha --recursive --reporter spec test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mundodocker/tchelinux2016.git"
+  },
+  "keywords": [
+    "tchelinux"
+  ],
+  "author": "Cássio Bock <bock@mundodocker.com.br>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mundodocker/tchelinux2016/issues"
+  },
+  "homepage": "https://github.com/mundodocker/tchelinux2016#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2"
+  }
+}
