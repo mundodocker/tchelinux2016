@@ -4,25 +4,24 @@ const sum = require('./src/sum')
 const app = express()
 const port = process.env.PORT || 3000
 
-app.get('/', (req, res) => {
-  res.send('Ola Tchê Linux!')
-})
+app.get('/', express.static(__dirname + '/public'))
 
-app.get('/sum', (req, res) => {
-  if (!req.query.first || !req.query.second) {
-    res.send('invalid values')
-
-    return
-  }
-
+app.get('/math', (req, res) => {
   const radix = 10
 
   const firstValue = parseInt(req.query.first, radix)
   const secondValue = parseInt(req.query.second, radix)
 
-  const result = sum(firstValue, secondValue)
+  switch (req.query.operation) {
+    case 'sum':
+      const result = sum(firstValue, secondValue)
 
-  res.send(`Sum: ${firstValue} + ${secondValue} = ${result}`)
+      res.send(`Sum: ${firstValue} + ${secondValue} = ${result}`)
+      break
+    default:
+      res.send('Operation not found')
+      break
+  }
 })
 
 app.listen(port, () => console.log(`Application running at port ${port}`))
