@@ -6,6 +6,6 @@ describe('sum', () => {
   it('should sum two numbers', () => {
     const result = sum(1, 2)
 
-    expect(result).to.be.deep.equal(3)
+    expect(result).to.be.deep.equal(5)
   })
 })
