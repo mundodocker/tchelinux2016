@@ -2,33 +2,76 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Tchê Linux 2016</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.2.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>TchêLinux  2016 - Mundo Docker</title>
   </head>
   <body>
-    <h1>Olá Tchê Linux!</h1>
-    <div>
-      <form method="get" action="/math">
-        <div>
-          <label for="operation">Operação</label>
-          <select id="operation" name="operation">
-            <option value="sum">Soma</option>
-          </select>
+    <div class="hero mundodocker-hero">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns">
+            <div class="column">
+              <h1 class="title">TchêLinux 2016 - Desenvolvimento com Docker</h1>
+            </div>
+          </div>
         </div>
-        <br />
-        <div>
-          <label for="first">Primeiro valor: </label>
-          <input id="first" name="first" type="number" required />
-        </div>
-        <br />
-        <div>
-          <label for="second">Segundo valor: </label>
-          <input id="second" name="second" type="number" required />
-        </div>
-        <br />
-        <div>
-          <input type="submit" value="Calcular" />
-        </div>
-      </form>
+      </div>
     </div>
+    <section class="section">
+      <div class="container">
+          <form id="math-form" method="get">
+            <div class="columns is-mobile">
+              <div class="column is-half-desktop is-mobile">
+                  <label class="label" for="operation">Operação</label>
+                  <p class="control">
+                    <span class="select is-medium">
+                      <select id="operation" name="operation">
+                        <option value="sum">Soma</option>
+                      </select>
+                    </span>
+                  </p>
+                  <label class="label" for="first">Primeiro valor: </label>
+                  <p class="control">
+                    <input id="first" class="input is-medium" name="first" type="number" required />
+                  </p>
+                  <label class="label" for="second">Segundo valor: </label>
+                  <p class="control">
+                    <input id="second" class="input is-medium" name="second" type="number" required />
+                  </p>
+                  <p class="control">
+                    <a id="submit-button" class="button is-large is-primary is-pulled-right">Calcular</a>
+                  </p>
+                </div>
+              </div>
+          </form>
+      </div>
+      <section id="message" class="hero is-hidden-mobile is-hidden-tablet">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">Resultado da operação</h1>
+            <h2 class="subtitle"><b></b></h2>
+          </div>
+        </div>
+      </section>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="content has-text-centered">
+           <p>
+             Made with <span class="fa fa-heart"></span> by <a href="http://www.mundodocker.com.br/" target="_blank">Mundo Docker</a>
+           </p>
+           <p>
+             Source code available at <a href="https://github.com/mundodocker/tchelinux2016" target="_blank">
+               <span class="footer-code-link"><span class="fa fa-github"></span> mundodocker/dockerfilelinter</span>
+             </a>
+           </p>
+        </div>
+      </div>
+    </footer>
+    <script src="/static/script.js" charset="utf-8"></script>
   </body>
 </html>
