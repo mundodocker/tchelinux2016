@@ -18,7 +18,7 @@ app.get('/math', (req, res) => {
     case 'sum':
       const result = sum(firstValue, secondValue)
 
-      res.send(`Sum: ${firstValue} + ${secondValue} = ${result}`)
+      res.send(`Soma: ${firstValue} + ${secondValue} = ${result}`)
       break
     default:
       res.send('Operation not found')
