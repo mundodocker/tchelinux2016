@@ -4,7 +4,9 @@ const sum = require('./src/sum')
 const app = express()
 const port = process.env.PORT || 3000
 
-app.get('/', express.static(__dirname + '/public'))
+app.use('/static', express.static('public'))
+
+app.get('/', (req, res) => res.sendFile(__dirname + '/public/index.html'))
 
 app.get('/math', (req, res) => {
   const radix = 10
